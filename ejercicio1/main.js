@@ -24,5 +24,13 @@ txt.addEventListener('input', (event) => {
             return ac;
     }, []);
 
+    // mostrar en el div
+    result.innerHTML = resultWords.reduce((ac, w)=>{
+        return ac +  `<p>
+            <label>${w.word}</label>: ${w.total}
+        
+        </p>`
+    }, "");
+
     console.log(resultWords);
 });
